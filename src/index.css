@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@import "tailwindcss/preflight"
+
+
+@layer base {
+    @font-face {
+        font-family: 'Dancing Script';
+        src: url('./fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
+        font-weight: 100 700;
+        font-style: normal;
+        font-display: swap;
+    }
+}
+
+@theme 
+{  
+    --color-text: #ebecec;  
+    --color-tahiti: #3ab7bf;  
+    --color-bermuda: #78dcca;
+}
+
+@keyframes fadeIn {
+    from {opacity : 0;}
+    to {opacity : 1;}
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-out forwards;
+}
