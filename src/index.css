@@ -1,15 +1,24 @@
 @import "tailwindcss";
-@import "tailwindcss/preflight"
 
 
-@layer base {
-    @font-face {
-        font-family: 'Dancing Script';
-        src: url('./fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
-        font-weight: 100 700;
-        font-style: normal;
-        font-display: swap;
-    }
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('./fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dream Orphans';
+    src: url('./fonts/DreamOrphans.otf') format('truetype');
+    font-weight: 100 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Dream Orphans', sans-serif;
 }
 
 @theme 

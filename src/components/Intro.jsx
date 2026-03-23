@@ -1,16 +1,50 @@
-import introimage from '/images/landing-img.jpg'
-const Intro = (props) => {
-    return (
-        <div class="intro-wrapper w-[100vw] pt-5 relative">
-            <div class="relative bg-[url(./images/landing-img.jpg)] w-full h-100 bg-center bg-cover mask-l-from-80% mask-r-from-80%">
-                <div class="intro-text-wrapper w-full text-6xl absolute text-center top-[40%] z-2">
-                <h1 class="font-dancing">Shelly Oliveira</h1>
-            </div>
-            </div> 
-            
-        </div>
-        
-    )
-}
+import { useEffect, useRef } from "react";
+import introimage from "/images/landing-img.jpg";
 
-export default Intro
+const Intro = () => {
+  const textRef = useRef(null);
+  const scrollY = useRef(0);
+  const ticking = useRef(false);
+
+  useEffect(() => {
+    const update = () => {
+      if (textRef.current) {
+        textRef.current.style.transform =
+          `translateY(${scrollY.current * 0.2}px)`;
+      }
+      ticking.current = false;
+    };
+
+    const handleScroll = () => {
+      scrollY.current = window.scrollY;
+
+      if (!ticking.current) {
+        window.requestAnimationFrame(update);
+        ticking.current = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div className="w-full pt-5 relative">
+      <div
+        className="relative w-full overflow-auto h-screen bg-center bg-cover"
+        style={{ backgroundImage: `url(${introimage})` }}
+      >
+        <div
+          ref={textRef}
+          className="absolute w-full text-center top-[40%] z-10 text-8xl will-change-transform"
+        >
+          <h1 className="font-dancing">
+            Shelly Bernwanger
+          </h1>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Intro;

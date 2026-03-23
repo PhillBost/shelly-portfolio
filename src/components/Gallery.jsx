@@ -1,26 +1,47 @@
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
+import { AdvancedImage } from '@cloudinary/react'
+import { Cloudinary } from "@cloudinary/url-gen"
 
-const Gallery = ({ images }) => {
+
+const cld = new Cloudinary({
+    cloud: {
+        cloudName: 'dkajgvxvp'
+    }
+})
+const Gallery = () => {
     const [imageClicked, setImageClicked] = useState(null);
+    const [images, setImages] = useState([]);
+
+    // fetch artwork when Gallery is mounted in DOM
+    useEffect(() => {
+    fetch('/api/art-images')
+        .then(res => res.json())
+        .then(publicIds => setImages(publicIds));
+    }, []);
+
 
     return (
-        <div class="w-[100vw]">
-            <h1 class="text-center text-2xl pt-22 pb-10">Gallery</h1>
+        <div class="w-full">
+            <h1 class="text-center text-3xl pt-12 pb-10">Gallery</h1>
             <div class=" px-5 grid sm:grid-cols-2 md:grid-cols-3  grid-cols-1 w-[100%] gap-5 place-items-center">
-                {images.map((src, idx) => (
-                    <div 
-                        key={idx} 
-                        className="overflow-hidden bg-white rounded-xl hover:cursor-pointer flex justify-center items-center duration-300"
-                    >
-                        <img 
-                            src={src} 
-                            alt={`Artwork ${idx + 1}`} 
-                            className="w-full h-auto transition-transform duration-700 ease-in-out hover:scale-105 object-contain"
-                            onClick={() => setImageClicked(src)}>
-                        </img>
+                {images.map((src, idx) => {
+                    const cldImg = cld.image(src.public_id);
 
-                    </div>
-                ))}
+                    return (
+                        <div 
+                            className="overflow-hidden bg-white rounded-xl hover:cursor-pointer flex justify-center items-center duration-300"
+                        >
+                            <AdvancedImage
+                                key={idx}
+                                cldImg={cldImg}
+                                alt={`Artwork ${idx + 1}`} 
+                                className="w-full h-auto transition-transform duration-700 ease-in-out hover:scale-105 object-contain"
+                                onClick={() => setImageClicked(src)}>
+                            </AdvancedImage>
+
+                        </div>
+                    );
+                })}
                 
             </div>
 
@@ -28,12 +49,16 @@ const Gallery = ({ images }) => {
             <div 
                 class="fixed flex inset-0 items-center justify-center z-50" 
                 onClick={() => setImageClicked(null)}>
-                <img src={imageClicked} alt="expanded art" 
-                    className="max-w-[80vw] max-h-[80vh] z-50 cursor-pointer animate-fadeIn duration-400">
+                <div class="grid-cols-1 z-50">
+                    <AdvancedImage 
+                        cldImg={cld.image(imageClicked.public_id)}  
+                        alt="expanded art"
+                        className="z-50 cursor-pointer animate-fadeIn duration-400">
+                    </AdvancedImage>
+                    <p class="w-full text-center">{imageClicked.display_name}</p>
+                </div>  
+                 <div class=" z-25 fixed w-full h-[100vh] bg-black opacity-50"></div>
 
-                 </img>
-                 <div class=" z-25 fixed w-[100vw] h-[100vh] bg-black opacity-50">
-                 </div>
             </div>
             )}
 
@@ -42,3 +67,4 @@ const Gallery = ({ images }) => {
 };
 
 export default Gallery;
+
