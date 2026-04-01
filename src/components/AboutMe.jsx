@@ -3,27 +3,7 @@ import { useState } from 'react';
 const AboutMe = () => {
 
 return (
-    <div className="relative">
-
-        {/* Wavy Top Divider */}
-        <svg
-        viewBox="0 0 1440 200"
-        className="block w-full h-[120px]"
-        preserveAspectRatio="none"
-        >
-        <path
-            d="
-            M0,120
-            C200,200 400,40 600,120
-            C800,200 1000,40 1200,120
-            C1300,160 1380,140 1440,120
-            L1440,0
-            L0,0
-            Z
-            "
-            className="fill-bermuda"
-        />
-        </svg>
+    <div className="relative pt-5"> 
 
         <div className="w-full pb-30 bg-bermuda">
         <h1 className="text-center text-2xl pt-10 pb-10">
