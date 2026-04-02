@@ -53,7 +53,7 @@ const Gallery = () => {
                     <AdvancedImage 
                         cldImg={cld.image(imageClicked.public_id)}  
                         alt="expanded art"
-                        className="z-50 cursor-pointer animate-fadeIn duration-400">
+                        className="z-50 max-w-50p cursor-pointer animate-fadeIn duration-400">
                     </AdvancedImage>
                     <p class="w-full text-center">{imageClicked.display_name}</p>
                 </div>  
