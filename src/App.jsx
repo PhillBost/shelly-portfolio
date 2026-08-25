@@ -3,19 +3,17 @@ import Intro from './components/Intro'
 import Gallery from './components/Gallery'
 import AboutMe from './components/AboutMe';
 
-const gallery = [
-  '/images/landing-img.jpg',
-  '/images/landing-img.jpg',
-  '/images/landing-img.jpg',
-  '/images/landing-img.jpg'
-];
+
+
+
 
 function App() {
+
   return (
-    <div className="container">
+    <div className="w-full">
       <Navbar/>
       <Intro/> 
-      <Gallery images={gallery}/>
+      <Gallery/>
       <AboutMe/>
     </div>
     
