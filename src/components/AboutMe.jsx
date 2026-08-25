@@ -2,7 +2,7 @@ import { siteContent } from "../content/siteContent";
 
 const AboutMe = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-white">
+    <section id="about" className="relative w-full overflow-hidden bg-white">
 
       {/* Brush divider */}
       <svg

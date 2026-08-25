@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import introimage from "/images/landing-img.jpg";
 
 const Intro = () => {
+
   const textRef = useRef(null);
   const scrollY = useRef(0);
   const ticking = useRef(false);
@@ -29,21 +30,23 @@ const Intro = () => {
   }, []);
 
   return (
-    <div className="w-full pt-5 relative">
-      <div
-        className="relative w-full overflow-auto h-screen bg-center bg-cover"
-        style={{ backgroundImage: `url(${introimage})` }}
-      >
+    <section id="home">
+      <div className="w-full pt-5 relative">
         <div
-          ref={textRef}
-          className="absolute w-full text-center top-[40%] z-10 text-8xl will-change-transform"
+          className="relative w-full overflow-auto h-screen bg-center bg-cover"
+          style={{ backgroundImage: `url(${introimage})` }}
         >
-          <h1 className="font-dancing">
-            Shelly Bernwanger
-          </h1>
+          <div
+            ref={textRef}
+            className="absolute w-full text-center top-[40%] z-10 text-8xl will-change-transform"
+          >
+            <h1 className="font-dancing">
+              Shelly Bernwanger
+            </h1>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

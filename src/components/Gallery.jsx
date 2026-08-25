@@ -23,7 +23,7 @@ const Gallery = () => {
   }, []);
 
   return (
-    <section className="w-full bg-white">
+    <section id="gallery" className="w-full bg-white">
       
       {/* Gallery heading */}
       <div className="mx-auto max-w-6xl px-6 pb-14 pt-24 md:px-12">
