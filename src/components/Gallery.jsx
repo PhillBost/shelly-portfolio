@@ -57,7 +57,8 @@ const Gallery = () => {
           
           {images.map((src, idx) => {
             const cldImg = cld.image(src.public_id);
-
+            console.log("Gallery image:", src);
+  console.log("Cloudinary URL:", cldImg.toURL());
             return (
               <button
                 key={src.public_id}
