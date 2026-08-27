@@ -32,3 +32,19 @@ app.listen(PORT, () => {
     console.log(`Backend running on http://localhost:${PORT}`);
     console.log({key: !!process.env.CLOUDINARY_API_KEY, secret: !!process.env.CLOUDINARY_API_SECRET})
 })
+
+const server = app.listen(PORT, () => {
+    console.log(`Backend running on http://localhost:${PORT}`);
+    console.log({
+        key: !!process.env.CLOUDINARY_API_KEY,
+        secret: !!process.env.CLOUDINARY_API_SECRET
+    });
+});
+
+server.on('close', () => {
+    console.log('SERVER CLOSED');
+});
+
+server.on('error', (err) => {
+    console.error('SERVER ERROR:', err);
+});
