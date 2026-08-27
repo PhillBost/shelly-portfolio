@@ -14,7 +14,12 @@ const Gallery = () => {
 
   // Fetch artwork when Gallery mounts
   useEffect(() => {
-    fetch("/api/art-images")
+
+    const API_URL = import.meta.env.PROD 
+    ? import.meta.env.VITE_API_URL
+    : '';
+
+    fetch(`${API_URL}/api/art-images`)
       .then((res) => res.json())
       .then((publicIds) => setImages(publicIds))
       .catch((error) => {
