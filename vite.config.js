@@ -12,5 +12,5 @@ export default defineConfig({
       '/api': 'http://localhost:8080'
     }
   },
-  base: '/shelly-portfolio',
+  base: '/',
 })
