@@ -19,8 +19,9 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'http://localhost:4173',
-    'https://phillbost.github.io'
+    'https://phillbost.github.io',
+    'https://shellyoliveira.com',
+    'https://www.shellyoliveira.com'
   ],
   methods: ['GET'],
 }));
