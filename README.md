@@ -6,7 +6,7 @@ The project uses a React/Vite frontend hosted on GitHub Pages, an Express backen
 
 ## Live Website
 
-https://phillbost.github.io/shelly-portfolio/
+shellyoliveira.com
 
 ## Backend
 
@@ -51,6 +51,7 @@ https://shelly-portfolio.onrender.com
 - GitHub Pages — frontend
 - Render — backend
 - Cloudinary — image storage and delivery
+- Cloudflare - DNS management
 
 ---
 
