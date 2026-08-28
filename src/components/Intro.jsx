@@ -41,7 +41,7 @@ const Intro = () => {
             className="absolute w-full text-center top-[40%] z-10 text-8xl will-change-transform"
           >
             <h1 className="font-dancing">
-              Shelly Bernwanger
+              Shelly Oliveira
             </h1>
           </div>
         </div>
