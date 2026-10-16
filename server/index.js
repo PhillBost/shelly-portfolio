@@ -29,9 +29,9 @@ app.use(express.json());
 app.use('/api', artRoutes);
 
 // this starts the server on either the port provided by env or port 5000
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-    console.log(`Backend running on http://localhost:${PORT}`);
+const PORT = Number(process.env.PORT) || 8080;
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Backend running on http://0.0.0.0:${PORT}`);
     console.log({key: !!process.env.CLOUDINARY_API_KEY, secret: !!process.env.CLOUDINARY_API_SECRET})
 })
 
