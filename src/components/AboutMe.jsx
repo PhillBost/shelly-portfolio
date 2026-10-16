@@ -77,7 +77,7 @@ const AboutMe = () => {
           <img
             src="/images/aboutme_portrait.jpeg"
             alt="Portrait of the artist"
-            className="aspect-[4/5] w-64 rounded-sm object-cover shadow-xl ring-1 ring-black/10 md:w-80"
+            className="aspect-[4/5] w-64 rounded-sm object-cover shadow-xl ring-1 ring-black/10 md:w-100"
           />
         </div>
 
