@@ -104,11 +104,16 @@ const AboutMe = () => {
             <p className="relative max-w-3xl text-lg leading-9 text-black/80 md:text-xl">
               {siteContent.bio}
             </p>
-
-            <p className="relative mt-8 text-sm tracking-wide text-black/45">
-              Instagram <span className="text-black/65">{siteContent.instagramHandle}</span>
-            </p>
           </div>
+        </div>
+
+        <div className="mt-10 flex flex-col items-center gap-1 md:ml-[220px] md:items-start">
+          <p className="text-xs tracking-[0.25em] text-black/45">
+            FIND ME ON INSTAGRAM
+          </p>
+          <p className="font-dancing text-3xl text-black/75 md:text-4xl">
+            {siteContent.instagramHandle}
+          </p>
         </div>
       </div>
     </section>

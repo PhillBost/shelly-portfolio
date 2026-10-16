@@ -19,15 +19,19 @@ router.get('/art-images', async (_, res) => {
         //talk to cloundinary, generate a result 
         const result = await cloudinary.v2.search
             .expression('folder:art-site/*')
+            .with_field('context')
             .sort_by('public_id', 'desc')
             .max_results(30)
             .execute();
 
-        //map the result to res and return res to the caller
+        /** map the result to res and return res to the caller
+         *  also checks if a shopifyUrl exists
+         **/
         res.json(result.resources.map(
             r => ({
                 public_id: r.public_id,
-                display_name: r.display_name
+                display_name: r.display_name,
+                shopifyUrl: r.context?.custom?.shopify || null
             })
         ));
     }   catch (err) {
