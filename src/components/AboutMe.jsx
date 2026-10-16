@@ -73,6 +73,14 @@ const AboutMe = () => {
           </p>
         </div>
 
+        <div className="mb-16 flex justify-center md:mb-20">
+          <img
+            src="/images/aboutme_portrait.jpeg"
+            alt="Portrait of the artist"
+            className="aspect-[4/5] w-64 rounded-sm object-cover shadow-xl ring-1 ring-black/10 md:w-80"
+          />
+        </div>
+
         {/* Bio */}
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[180px_1fr]">
           <div className="flex flex-col items-center md:items-start">

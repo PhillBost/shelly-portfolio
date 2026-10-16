@@ -1,16 +1,17 @@
 export const siteContent = {
   bio: `
-    My love for painting the face arose after being a makeup artist for
-    12 years. I discovered that the elements of the face create a painting
-    through the colors of the skin, eyes, lips, and hair.
-
-    These features, their colors, along with the makeup used alongside them,
-    can create many different feelings on one subject. I’ve been using oils
-    and acrylic as a medium for 8 years, and each painting begins with a
-    color story in mind before I have chosen a subject.
-
-    Recently, I’ve had an interest in painting vases and flowers, using the
-    palette knife to create unique textures in each piece.
+    I am a self-taught artist who has been painting for 10 years now.  
+    As a member of the Northville Art House, I have taken many different 
+    classes and participated in several shows.  My primary medium is oil 
+    and acrylic paints.  The subjects that I enjoy painting are female 
+    portraits and flowers, but recently, my favorite thing to paint is 
+    Intuitive Abstracts. I use Acrylic paints, markers, and all types of 
+    mixed media on canvas. In addition, I love to focus on a particular color 
+    story depending on the mood that I’m in. With intuitive abstract painting, 
+    I never know how a painting will turn out. Each painting is an adventure.  
+    I find the psychology of colors, and the reasons that draw each of us to 
+    certain colors, fascinating.  The interesting textures, lines, and shapes, 
+    are the building blocks that bring the painting alive.
   `,
 
   aboutTitle: "About Me",
