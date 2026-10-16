@@ -104,6 +104,10 @@ const AboutMe = () => {
             <p className="relative max-w-3xl text-lg leading-9 text-black/80 md:text-xl">
               {siteContent.bio}
             </p>
+
+            <p className="relative mt-8 text-sm tracking-wide text-black/45">
+              Instagram <span className="text-black/65">{siteContent.instagramHandle}</span>
+            </p>
           </div>
         </div>
       </div>

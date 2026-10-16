@@ -16,5 +16,7 @@ export const siteContent = {
 
   aboutTitle: "About Me",
 
+  instagramHandle: "@yourhandle",
+
   galleryTitle: "Gallery",
 };
