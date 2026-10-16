@@ -77,7 +77,7 @@ const AboutMe = () => {
           <img
             src="/images/aboutme_portrait.jpeg"
             alt="Portrait of the artist"
-            className="aspect-[4/5] w-64 rounded-sm object-cover shadow-xl ring-1 ring-black/10 md:w-80"
+            className="aspect-[4/5] w-64 rounded-sm object-cover shadow-xl ring-1 ring-black/10 md:w-100"
           />
         </div>
 
@@ -105,6 +105,15 @@ const AboutMe = () => {
               {siteContent.bio}
             </p>
           </div>
+        </div>
+
+        <div className="mt-10 flex flex-col items-center gap-1 md:ml-[220px] md:items-start">
+          <p className="text-xs tracking-[0.25em] text-black/45">
+            FIND ME ON INSTAGRAM
+          </p>
+          <p className="font-dancing text-3xl text-black/75 md:text-4xl">
+            {siteContent.instagramHandle}
+          </p>
         </div>
       </div>
     </section>
