@@ -16,7 +16,7 @@ export const siteContent = {
 
   aboutTitle: "About Me",
 
-  instagramHandle: "@yourhandle",
+  instagramHandle: "@shelloliveira_paints",
 
   galleryTitle: "Gallery",
 };
