@@ -108,7 +108,7 @@ PERFORMANCE OF THIS SOFTWARE.
     I find the psychology of colors, and the reasons that draw each of us to 
     certain colors, fascinating.  The interesting textures, lines, and shapes, 
     are the building blocks that bring the painting alive.
-  `,aboutTitle:"About Me",instagramHandle:"@yourhandle"},mp=()=>B.jsxs("section",{id:"about",className:"relative w-full overflow-hidden bg-white",children:[B.jsxs("svg",{className:"block h-[65px] w-full",viewBox:"0 0 1440 100",preserveAspectRatio:"none","aria-hidden":"true",children:[B.jsx("path",{d:`
+  `,aboutTitle:"About Me",instagramHandle:"@shelloliveira_paints"},mp=()=>B.jsxs("section",{id:"about",className:"relative w-full overflow-hidden bg-white",children:[B.jsxs("svg",{className:"block h-[65px] w-full",viewBox:"0 0 1440 100",preserveAspectRatio:"none","aria-hidden":"true",children:[B.jsx("path",{d:`
             M0,52
             C150,25 300,78 460,48
             C620,18 770,82 930,50
